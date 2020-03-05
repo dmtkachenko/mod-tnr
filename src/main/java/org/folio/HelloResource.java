@@ -5,12 +5,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/hello")
-public class ExampleResource {
+@Path("/tnr")
+public class HelloResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
+    @Path("/hello")
     public String hello() {
-        return "hello";
+        return "Hello, stranger! This is your tenant resolution speaking";
     }
 }
